@@ -2,18 +2,17 @@ const generator = require('node-html-to-image');
 const fs = require('fs');
 const server = require('express')();
 
-const defaults = require('./defaults');
-
-
 server.get('/', async function (req, res) {
 	let template = fs.readFileSync("template.html").toString();
+	let content = Object.assign(req.query);
 
 	const image = await generator({
 		html: template,
 		transparent: true,
-		content: Object.assign(defaults, req.query)
+		content
 	});
 
+	res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 	res.writeHead(200, { 'Content-Type': 'image/png' });
  	res.end(image, 'binary');
 
