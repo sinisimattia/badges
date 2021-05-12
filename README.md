@@ -13,3 +13,7 @@ An over-minimalistic badge generator.
 
 ## Result with random image
 ![Random Preview](https://minimal-badges.herokuapp.com/?title=Built%20With%20Love&borderRadius=10px&backgroundImage=https://picsum.photos/1000)
+
+___
+
+**Disclaimer:** This app is hosted on a _free Heroku dyno_. It is only for demonstration so, after long periods of inactivity, the servers would need to resart. I'm looking for a free and 24h-up solution for Express.js hosting. Maybe Vercel.
