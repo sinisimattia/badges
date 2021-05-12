@@ -9,20 +9,21 @@ server.get('/', async function (req, res) {
 	const image = await generator({
 		html: template,
 		transparent: true,
-		puppeteerArgs: [
-			'--no-sandbox',
-			'--disable-setuid-sandbox',
-		],
+		puppeteerArgs: {
+			args: [
+				'--no-sandbox',
+				'--disable-setuid-sandbox',
+			]
+		},
 		content
 	});
 
 	res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 	res.writeHead(200, { 'Content-Type': 'image/png' });
- 	res.end(image, 'binary');
+	res.end(image, 'binary');
 
 })
 
 server.listen(process.env.PORT || 80, () => {
 	console.log("Server started.")
 });
-  
