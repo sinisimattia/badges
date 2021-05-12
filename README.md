@@ -9,4 +9,4 @@ An over-minimalistic badge generator.
 
 
 ## Result
-![Preview](https://minimal-badges.herokuapp.com/?title=Built%20With%20Love&borderRadius=10px&backgroundImage=https://peakvisor.com/img/news/french-mountains.jpg)
+![Preview](https://minimal-badges.herokuapp.com/?title=Built%20With%20Love&borderRadius=15px&backgroundImage=https://peakvisor.com/img/news/french-mountains.jpg)
