@@ -9,6 +9,10 @@ server.get('/', async function (req, res) {
 	const image = await generator({
 		html: template,
 		transparent: true,
+		puppeteerArgs: [
+			'--no-sandbox',
+			'--disable-setuid-sandbox',
+		],
 		content
 	});
 
